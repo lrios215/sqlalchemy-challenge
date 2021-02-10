@@ -6,17 +6,9 @@ To help with your trip planning, you need to do some climate analysis on the are
 
 ## Step 1 - Climate Analysis and Exploration
 
-To begin, use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. All of the following analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
+Python and SQLAlchemy was used to do basic climate analysis and data exploration of your climate database. All of the following analysis was completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 
-* Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources/hawaii.sqlite) files to complete your climate analysis and data exploration.
-
-* Choose a start date and end date for your trip. Make sure that your vacation range is approximately 3-15 days total.
-
-* Use SQLAlchemy `create_engine` to connect to your sqlite database.
-
-* Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
-
-### Precipitation Analysis
+### Precipitation Analysis: The following are the steps completed.
 
 * Design a query to retrieve the last 12 months of precipitation data.
 
@@ -25,12 +17,14 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
 * Load the query results into a Pandas DataFrame and set the index to the date column.
 
 * Sort the DataFrame values by `date`.
+![DF](Images/precip_aug_2016_2017.png)
 
 * Plot the results using the DataFrame `plot` method.
 
-  ![precipitation](Images/precipitation.png)
+![precipitation](Images/1_aug_precip.png)
 
 * Use Pandas to print the summary statistics for the precipitation data.
+![sumstats](Images/sum_stats_precip.png)
 
 ### Station Analysis
 
@@ -39,10 +33,10 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
 * Design a query to find the most active stations.
 
   * List the stations and observation counts in descending order.
+  ![activestations](Images/most_active_stations.png)
 
-  * Which station has the highest number of observations?
-
-  * Hint: You will need to use a function such as `func.min`, `func.max`, `func.avg`, and `func.count` in your queries.
+  * Which station has the highest number of observations?  Calculate the highest, lowest and average observations, functions `func.min`, `func.max`, `func.avg`, and `func.count` were used in the queries.
+  ![mostactive](Iamges/low_high_av_station_high.png)
 
 * Design a query to retrieve the last 12 months of temperature observation data (TOBS).
 
@@ -50,15 +44,14 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
 
   * Plot the results as a histogram with `bins=12`.
 
-    ![station-histogram](Images/station-histogram.png)
+    ![station-histogram](Images/Highest_temp_obs.png)
 
 - - -
 
 ## Step 2 - Climate App
 
-Now that you have completed your initial analysis, design a Flask API based on the queries that you have just developed.
+Flask API was designed based on the queries that were developed.
 
-* Use Flask to create your routes.
 
 ### Routes
 
@@ -91,11 +84,6 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
   * When given the start and the end date, calculate the `TMIN`, `TAVG`, and `TMAX` for dates between the start and end date inclusive.
 
-## Hints
-
-* You will need to join the station and measurement tables for some of the queries.
-
-* Use Flask `jsonify` to convert your API data into a valid JSON response object.
 
 - - -
 
