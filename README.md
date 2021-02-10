@@ -17,7 +17,7 @@ Python and SQLAlchemy was used to do basic climate analysis and data exploration
 * Load the query results into a Pandas DataFrame and set the index to the date column.
 
 * Sort the DataFrame values by `date`.
-![DF](Images/precip_aug_2016_2017.png)
+![DF](Images/precip_aug_2016_17.png)
 
 * Plot the results using the DataFrame `plot` method.
 
@@ -36,7 +36,7 @@ Python and SQLAlchemy was used to do basic climate analysis and data exploration
   ![activestations](Images/most_active_stations.png)
 
   * Which station has the highest number of observations?  Calculate the highest, lowest and average observations, functions `func.min`, `func.max`, `func.avg`, and `func.count` were used in the queries.
-  ![mostactive](Iamges/low_high_av_station_high.png)
+  ![mostactive](Images/low_high_av_station_high.png)
 
 * Design a query to retrieve the last 12 months of temperature observation data (TOBS).
 
